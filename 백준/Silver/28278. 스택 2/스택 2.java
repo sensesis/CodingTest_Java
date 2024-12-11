@@ -37,14 +37,14 @@ public class Main {
                     break;
 
                 case 4:
-                    if (s.empty())
+                    if (s.isEmpty())
                         System.out.println(1);
                     else
                         System.out.println(0);
                     break;
 
                 case 5:
-                    if (!s.empty())
+                    if (!s.isEmpty())
                         System.out.println(s.peek());
                     else
                         System.out.println(-1);
