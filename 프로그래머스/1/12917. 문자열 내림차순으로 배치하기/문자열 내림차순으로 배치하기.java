@@ -5,12 +5,7 @@ class Solution {
         char[] chArr = s.toCharArray();
         Arrays.sort(chArr);
         
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < chArr.length; i++) {
-            sb.append(chArr[i]);
-        }
-        
-        return sb.reverse().toString();
+        return new StringBuilder(new String(chArr)).reverse().toString();
     }
 }
 
