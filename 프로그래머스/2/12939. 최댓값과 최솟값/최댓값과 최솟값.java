@@ -2,21 +2,16 @@ import java.util.*;
 
 class Solution {
     public String solution(String s) {
-        int max = -9999;
-        int min = 9999;
-        
         String[] strArr = s.split(" ");
+        ArrayList<Integer> arr = new ArrayList<>();
         
         for (String str : strArr) {
             int num = Integer.parseInt(str);
-            
-            if (max < num) max = num;
-            if (min > num) min = num;
+            arr.add(num);
         }
         
-        return min + " " + max;
+        Collections.sort(arr);
+        
+        return arr.get(0) + " " + arr.get(arr.size()-1);
     }
 }
-
-
-
