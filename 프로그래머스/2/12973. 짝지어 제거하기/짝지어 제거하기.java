@@ -2,24 +2,21 @@ import java.util.*;
 
 class Solution {
     public int solution(String s) {
-        Deque<Character> stack = new ArrayDeque<>();
-        int answer = 0;
-
+        ArrayDeque<Character> sta = new ArrayDeque<>();
+        
         for (char ch : s.toCharArray()) {
-            if (stack.isEmpty()) {
-                stack.push(ch);
+            if (sta.isEmpty()) {
+                sta.push(ch);
                 continue;
             }
             
-            if (stack.peek().equals(ch)) {
-                stack.pop();
+            if (sta.peek().equals(ch)) {
+                sta.pop();
             } else {
-                stack.push(ch);
+                sta.push(ch);
             }
         }
         
-        
-        
-        return stack.isEmpty() ? 1 : 0;
+        return sta.isEmpty() ? 1 : 0;
     }
 }
