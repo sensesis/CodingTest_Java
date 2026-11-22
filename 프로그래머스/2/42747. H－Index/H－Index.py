@@ -8,7 +8,7 @@ def solution(citations):
         minH = i
         
         if (h >= maxH) and (h >= minH):
-            answer = max(answer, maxH)   
+            answer = max(answer, maxH)  
             
     return answer        
         
