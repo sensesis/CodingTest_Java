@@ -3,7 +3,6 @@ from collections import deque
 def LRU(name, cache, cacheSize):
     
     if name in cache:
-        #print(f"cache: {cache}")
         cache.remove(name)
         cache.append(name)
         return cache, 1
@@ -16,7 +15,6 @@ def LRU(name, cache, cacheSize):
             cache.popleft()
             
     cache.append(name)
-    #print(f"cache: {cache}")
     
     return cache, 5
         
@@ -31,7 +29,6 @@ def solution(cacheSize, cities):
     for name in cities:
         cache, t = LRU(name, cache, cacheSize)
         answer += t
-        #print(f"name: {name}, answer: {answer}")
         
     return answer
 
